@@ -1,17 +1,23 @@
-/* RESET BÁSICO */
+/* ============================================
+   RESET E BASE
+   ============================================ */
+/* Zera margens e padding, define box-sizing para border-box */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
   html, body {
+    /* Fonte base e cor de fundo neutra */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background: #f4f7fa;
     color: #333;
   }
   
-  /* VARIÁVEIS DE CORES */
+  /* ============================================
+     VARIÁVEIS CSS
+     ============================================ */
   :root {
     --cor-primaria: #1e90ff;
     --cor-secundaria: #0d37c3;
@@ -21,13 +27,11 @@
     --sombra-forte: rgba(0, 0, 0, 0.15);
   }
   
-  /* LAYOUT GLOBAL */
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+  /* ============================================
+     HEADER E NAVEGAÇÃO
+     ============================================ */
   header {
+    /* Gradient no topo e sombra para destaque */
     background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
     box-shadow: 0 2px 8px var(--sombra-forte);
   }
@@ -41,6 +45,7 @@
     flex: 1;
   }
   .menu a {
+    /* Links do menu centralizados e padding generoso */
     display: block;
     text-align: center;
     padding: 1rem;
@@ -51,11 +56,15 @@
   }
   .menu a:hover,
   .menu a.ativo {
+    /* Hover e página ativa recebem fundo semitransparente */
     background: rgba(255, 255, 255, 0.1);
   }
   
-  /* CONTEÚDO PRINCIPAL */
+  /* ============================================
+     MAIN E CONTEÚDO CENTRAL
+     ============================================ */
   main {
+    /* Container central com sombra suave e bordas arredondadas */
     flex: 1;
     max-width: 960px;
     margin: 2rem auto;
@@ -66,17 +75,22 @@
     transition: box-shadow 0.3s;
   }
   main:hover {
+    /* Sombra mais intensa no hover */
     box-shadow: 0 6px 20px var(--sombra-forte);
   }
   
-  /* SEÇÃO SOBRE MIM */
+  /* ============================================
+     SEÇÃO SOBRE MIM
+     ============================================ */
   #sobre-mim h1 {
+    /* Título grande com borda inferior para separar */
     font-size: 2rem;
     margin-bottom: 1.5rem;
     border-bottom: 3px solid var(--cor-primaria);
     padding-bottom: 0.5rem;
   }
   .sobre-item {
+    /* Cartão de texto com sombra e hover */
     background: var(--fundo-claro);
     padding: 1.5rem;
     margin-bottom: 1rem;
@@ -88,13 +102,17 @@
     box-shadow: 0 4px 16px var(--sombra-forte);
   }
   .sobre-item p {
+    /* Texto com espaçamento de linha confortável */
     font-size: 1rem;
     line-height: 1.6;
     color: #444;
   }
   
-  /* FORMULÁRIO DE CONTATO */
+  /* ============================================
+     FORMULÁRIO DE CONTATO
+     ============================================ */
   form {
+    /* Grid simples para espaçamento uniforme */
     display: grid;
     gap: 1.5rem;
   }
@@ -103,6 +121,7 @@
   }
   form input,
   form textarea {
+    /* Estilo padrão para inputs e textarea */
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ccc;
@@ -115,6 +134,7 @@
     outline: none;
   }
   form button {
+    /* Botão com destaque e efeito de hover */
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 6px;
@@ -129,39 +149,35 @@
     transform: translateY(-2px);
   }
   
-  /* RESPONSIVIDADE */
-  @media (max-width: 600px) {
-    .menu {
-      flex-direction: column;
-    }
-    main {
-      margin: 1rem;
-      padding: 1rem;
-    }
-  }
-  
-  /* GALERIA DE PROJETOS EM PYTHON */
+  /* ============================================
+     SEÇÃO PORTFÓLIO
+     ============================================ */
   #portfolio h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--cor-primaria);
+    padding-bottom: 0.5rem;
     text-align: center;
   }
   .portfolio-grid {
+    /* Grid Responsivo para cards de projeto */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
   }
   .projeto-item {
+    /* Cartão uniforme para cada projeto */
     background: var(--fundo-claro);
-    border-radius: 12px;
     padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--sombra-leve);
+    transition: box-shadow 0.3s, transform 0.3s;
     text-align: center;
-    box-shadow: 0 4px 12px var(--sombra-leve);
-    transition: transform 0.3s, box-shadow 0.3s;
   }
   .projeto-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px var(--sombra-forte);
+    box-shadow: 0 4px 16px var(--sombra-forte);
+    transform: translateY(-4px);
   }
   .projeto-item img {
     width: 80px;
@@ -170,14 +186,17 @@
   }
   .projeto-item h2 {
     font-size: 1.5rem;
+    color: var(--cor-primaria);
     margin-bottom: 0.75rem;
   }
   .projeto-item p {
     font-size: 1rem;
-    color: #555;
+    line-height: 1.5;
+    color: #444;
     margin-bottom: 1rem;
   }
   .projeto-item a {
+    /* Link de download estilizado como botão */
     display: inline-block;
     padding: 0.5rem 1rem;
     background: var(--cor-primaria);
@@ -191,7 +210,9 @@
     background: var(--cor-secundaria);
   }
   
-  /* FORMAÇÃO ACADÊMICA */
+  /* ============================================
+     SEÇÃO FORMAÇÃO ACADÊMICA
+     ============================================ */
   #formacao h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
@@ -226,7 +247,9 @@
     color: #444;
   }
   
-  /* CURSOS COMPLEMENTARES */
+  /* ============================================
+     SEÇÃO CURSOS COMPLEMENTARES
+     ============================================ */
   .cursos-complementares {
     list-style: disc inside;
     margin-top: 1rem;
@@ -237,64 +260,11 @@
     font-size: 1rem;
     color: #444;
   }
-  /* === Seção Portfólio (mesma linha visual da Formação) === */
-#portfolio h1 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 3px solid var(--cor-primaria);
-    padding-bottom: 0.5rem;
-  }
   
-  .projeto-item {
-    background: var(--fundo-claro);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px var(--sombra-leve);
-    transition: box-shadow 0.3s, transform 0.3s;
-    text-align: center;
-  }
-  
-  .projeto-item:hover {
-    box-shadow: 0 4px 16px var(--sombra-forte);
-    transform: translateY(-4px);
-  }
-  
-  .projeto-item img {
-    width: 80px;
-    margin-bottom: 1rem;
-    display: block;
-  }
-  
-  .projeto-item h2 {
-    font-size: 1.5rem;
-    color: var(--cor-primaria);
-    margin-bottom: 0.75rem;
-  }
-  
-  .projeto-item p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #444;
-    margin-bottom: 1rem;
-  }
-  
-  .projeto-item a {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: var(--cor-primaria);
-    color: var(--texto-claro);
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.3s;
-  }
-  
-  .projeto-item a:hover {
-    background: var(--cor-secundaria);
-  }
-  /* ==== Contato ==== */
-#contato {
+  /* ============================================
+     SEÇÃO CONTATO
+     ============================================ */
+  #contato {
     display: flex;
     justify-content: center;
   }
@@ -362,8 +332,17 @@
     transform: translateY(-2px);
   }
   
-  /* Responsividade */
-  @media (max-width: 480px) {
+  /* ============================================
+     RESPONSIVIDADE
+     ============================================ */
+  @media (max-width: 600px) {
+    .menu {
+      flex-direction: column;
+    }
+    main {
+      margin: 1rem;
+      padding: 1rem;
+    }
     .contato-card {
       padding: 1.5rem;
       margin: 0 1rem;

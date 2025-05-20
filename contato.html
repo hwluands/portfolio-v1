@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Define charset UTF-8 e viewport para responsividade -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Título mostrado na aba do navegador -->
   <title>Contato – Meu Portfólio</title>
+  <!-- Importa o CSS principal para estilização global -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Cabeçalho fixo com menu de navegação entre páginas -->
   <header>
     <nav>
       <ul class="menu">
         <li><a href="index.html">Sobre mim</a></li>
         <li><a href="formacao.html">Formação</a></li>
         <li><a href="portfolio.html">Portfólio</a></li>
+        <!-- Página corrente ganha classe 'ativo' -->
         <li><a href="contato.html" class="ativo">Contato</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Conteúdo principal centralizado dentro de 'main' -->
   <main>
     <section id="contato">
+      <!-- Card que envolve o formulário de contato -->
       <article class="contato-card">
+        <!-- Título da seção de contato -->
         <h1>Fale comigo</h1>
+        <!-- Exibe nome ou subtítulo opcional -->
         <p class="contato-nome">Luan Henrique Weber</p>
+        <!-- Formulário para envio de mensagens -->
         <form id="form-contato" action="#" method="POST">
+          <!-- Grupo de campo para aplicar estilo conjunto -->
           <div class="form-group">
             <label for="nome">Nome completo</label>
             <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
@@ -40,12 +51,14 @@
             <label for="mensagem">Mensagem</label>
             <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem aqui…" required></textarea>
           </div>
+          <!-- Botão de envio com texto claro e ação definida -->
           <button type="submit">Enviar mensagem</button>
         </form>
       </article>
     </section>
   </main>
 
+  <!-- Importa o script JavaScript para funcionalidades básicas (destacar menu, validar formulário) -->
   <script src="js/script.js"></script>
 </body>
 </html>
