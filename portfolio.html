@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Metadados básicos: charset e viewport responsivo -->
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Título que aparece na aba do navegador -->
   <title>Portfólio – Meu Portfólio</title>
+  <!-- Ligação com o arquivo CSS global para estilos comuns -->
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
+  <!-- Cabeçalho com menu de navegação para todas as páginas -->
   <header>
     <nav>
       <ul class="menu">
         <li><a href="index.html">Sobre mim</a></li>
         <li><a href="formacao.html">Formação</a></li>
+        <!-- Atual página recebe classe 'ativo' para destacar -->
         <li><a href="portfolio.html" class="ativo">Portfólio</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Área principal de conteúdo -->
   <main>
     <section id="portfolio">
+      <!-- Título da seção de projetos -->
       <h1>Meus Projetos em Python</h1>
       
+      <!-- Grid que agrupa os cartões de cada projeto -->
       <div class="portfolio-grid">
-        <!-- Cardápio Interativo -->
+        <!-- Início do cartão de projeto -->
         <article class="projeto-item">
+          <!-- Logo do Python para identificar a linguagem -->
           <img
             src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"
             alt="Python Logo"
           />
+          <!-- Título do projeto -->
           <h2>Cardápio Interativo</h2>
+          <!-- Descrição breve do que o script faz -->
           <p>
             Script que exibe um cardápio (tupla) e permite ao usuário adicionar
             itens ao pedido, calculando o total em tempo real.
           </p>
+          <!-- Link para download do código Python -->
           <a href="scripts/Cardápio Interativo.py" download>📥 Baixar código Python</a>
         </article>
 
-        <!-- Sistema de Cadastro e Pesquisa de Clientes -->
+        <!-- Outro projeto em cartão similar -->
         <article class="projeto-item">
           <img
             src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"
@@ -56,6 +68,7 @@
     </section>
   </main>
 
+  <!-- Script JavaScript comum para interatividade mínima -->
   <script src="js/script.js"></script>
 </body>
 </html>
