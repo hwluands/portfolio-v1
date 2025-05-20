@@ -1,4 +1,4 @@
-# Meu Portfólio Pessoal
+# Portfólio - Luan H. Weber      (PROJETO GRADUAÇÃO)
 
 [![Demo online](https://img.shields.io/badge/Demo-online-brightgreen)](https://hwluands.github.io/portfolio-v1/)  
 [![HTML](https://img.shields.io/badge/HTML-66.5%25-orange)]() [![CSS](https://img.shields.io/badge/CSS-25.4%25-blue)]() [![JavaScript](https://img.shields.io/badge/JavaScript-8.1%25-yellow)]()
